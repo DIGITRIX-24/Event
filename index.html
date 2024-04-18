@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="DIGITRIX-24" />
+    <meta name="keywords" content="DIGITRIX-24" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITRIX-24</title>    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/infinite.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/section2.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/challanges.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/requirement.css">
+    <link rel="stylesheet" href="css/prize.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "l9pteomy5r");
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-wrap">
+        <nav>
+    <div class="nav-wrap d-flex flex-row justify-content-between align-items-center">
+        <div class="nav-logo">
+            <img class="tn-logo" src="assets/achariyalogo.jpg">
+            <img class="tn-logo" src="assets/AASClogo.jpg">
+        </div>
+        <ul class="nav-items d-flex flex-row m-0">
+            <li><a href="index.html#home">Home</a></li>
+            <!-- <li><a href="#about">About</a></li> -->
+            <li><a href="index.html#feature">Events</a></li>
+            <li><a href="index.html#about">About us</a></li>
+
+            <li><a class="highlight-me" href="https://forms.gle/F2yPmLUSZq6d7Mui9" target="_blank">Register Now</a></li>
+        </ul>
+        <a class="highlight-me mobile-btn" href="https://forms.gle/F2yPmLUSZq6d7Mui9" target="_blank">Register Now </a>
+    </div>
+</nav>        
+<div class="home-cover"></div>
+        
+<section class="hero" id="home">
+    <div class="hero-wrap d-flex flex-column justify-content-center align-items-center">
+        <!-- <div class="event-by">
+            <img class="avatar" src="../assets/tn-police.png">
+        </div> -->
+        <div class="greetings d-flex flex-column justify-content-center align-items-center text-center">
+            <p class="m-0" >WELCOME TO</p>
+            <div class="yukthi-logo-container"> 
+                <img class="yukthi-logo" src="assets/logo.png" style="width: 348px; height: 100%;">
+            </div>
+            <!-- <p class="m-0">NATIONAL LEVEL TECH MEET</p>  -->
+                <p class="effect-wrapper"><span id="typed"></span><span class="cursor">&nbsp;</span></p>
+                  
+        <div class="register">
+            <a class="register-btn shining-line" href="https://forms.gle/F2yPmLUSZq6d7Mui9" target="_blank">Register now</a>
+        </div>
+        <p class="m-0">Countdown to Launch !</p> 
+        <br>  
+        <div class="count-down">
+            <div class="days"><p>0</p><span>DAYS</span></div>
+            <div class="hours"><p>0</p><span>HOURS</span></div>
+            <div class="minutes"><p>0</p><span>MINUTES</span></div>
+            <div class="seconds"><p>0</p><span>SECONDS</span></div>    
+        </div>
+    </div>
+</section>
+<script>
+    const typedSpan = document.getElementById("typed")
+const totype = ["From Department of Computer Science", "CALLING ALL TOP MINDS FOR DIGITRIX-24 ","A NATIONAL LEVEL TECHNICAL SYMPOSIUM", "A NATIONAL LEVEL TECH MEET", "Towards Advanced Level Of Technology","All departments students are most welcome to participate in our event"]
+
+const delayTyping_char = 200;
+const delayErasing_text = 150;
+const delayTyping_text = 800;
+
+let totypeIndex = 0;
+let charIndex = 0;
+
+function typeText() {
+	if (charIndex < totype[totypeIndex].length) {
+		typedSpan.textContent += totype[totypeIndex].charAt(charIndex);
+		charIndex++;
+		setTimeout(typeText, delayTyping_char);
+	}
+	else {
+		setTimeout(eraseText, delayTyping_text);
+	}
+}
+
+function eraseText() {
+	if (charIndex > 0) {
+		typedSpan.textContent = totype[totypeIndex].substring(0, charIndex-1);
+		charIndex = charIndex-1;
+		setTimeout(eraseText, delayErasing_text);
+	}
+	else {
+		totypeIndex++;
+
+		if (totypeIndex >= totype.length)
+			totypeIndex = 0;
+			setTimeout(typeText, delayTyping_text);
+	}
+}
+
+window.onload = function() {
+	if (totype[totypeIndex].length) setTimeout(typeText, delayTyping_text);
+}
+</script>
+
+
+<script>
+var targetTimestamp = new Date("2024-04-29 09:30:00").getTime(); // Set your target timestamp here
+
+if (targetTimestamp) {
+    function updateCountdown() {
+        var now = new Date().getTime();
+        var distance = targetTimestamp - now; // Calculate the time difference in milliseconds
+        
+        // Time calculations for days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the result
+        document.querySelector(".count-down .days p").innerHTML = days;
+        document.querySelector(".count-down .hours p").innerHTML = hours;
+        document.querySelector(".count-down .minutes p").innerHTML = minutes;
+        document.querySelector(".count-down .seconds p").innerHTML = seconds;
+        
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(interval);
+            document.querySelector(".count-down").innerHTML = "<span style='font-size: 20px;'>Event</span>";
+        }
+    }
+
+    // Update the countdown every second
+    var interval = setInterval(updateCountdown, 1000);
+} else {
+    document.querySelector(".count-down").innerHTML = "<span style='font-size: 20px;'>Event</span>";
+}
+
+</script>
+     
+<div class="challange" id="feature">
+  <div class="challange-wrap">
+      <div class="ch-header">
+        <div class="ch-header-topic1 d-flex flex-row align-items-center">
+          <span class="green-text ps-2">DIGITRIX-24</span>
+        </div>
+        <h3 class="ch-header-topic2">Technical & Non Technical Events</h3>
+      </div>
+            <div class="container">
+        <div class="swiper tranding-slider d-flex flex-column justify-content-between">
+          <div class="swiper-wrapper">
+                      <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                
+                </div>
+
+                <img class="challange-topic-img"  src="assets/ppt.gif">
+    
+                <h2 class="ch-topic text-center">PAPER PRESENTATION</h2>
+                <p class="ch-desc">"Ideas on Paper, Minds in Motion: Unveiling Tomorrow's Horizons!"</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/code-D.gif">
+                <h2 class="ch-topic text-center">Code Drive</h2>
+                <p class="ch-desc">First, solve the problem. Then, Write the code.</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/techquiz.gif">
+                <h2 class="ch-topic text-center">Tech-Quiz</h2>
+                <p class="ch-desc">"Where Knowledge Meets Innovation!"</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/conn.gif">
+                <h2 class="ch-topic text-center">Technical Connection</h2>
+                <p class="ch-desc">Innovation, Expertise, Networking. Don't miss out!"</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/th.gif">
+                <h2 class="ch-topic text-center">Treasure Hunt</h2>
+                <p class="ch-desc">Follow the clues, uncover secrets, find treasures untold.</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                
+                </div>
+                <img class="challange-topic-img"  src="assets/sh.gif">
+                <h2 class="ch-topic text-center">Short Flim</h2>
+                <p class="ch-desc">Embrace the moment, for life's reel never rewinds.</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/d.gif">
+                <h2 class="ch-topic text-center">Dance</h2>
+                <p class="ch-desc">Dance is the hidden language of the soul, expressing what words cannot.</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                
+                </div>
+                <img class="challange-topic-img"  src="assets/singer.gif">
+                <h2 class="ch-topic text-center">Singing</h2>
+                <p class="ch-desc">Music is the voice of the soul, and singing is its echo.</p>
+            </div>
+                        <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/mf.jpg">
+                <h2 class="ch-topic text-center">Myths and Facts</h2>
+                <p class="ch-desc">Separate myth from fact, unveil the truth's untold story</p>
+            </div>
+            <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/E.gif">
+                <h2 class="ch-topic text-center">E-Sports</h2>
+                <p class="ch-desc">Every game is a journey. Make your moves count.</p>
+            </div>
+            <div class="swiper-slide tranding-slide">
+                <div class="challange-topic-img-wrap d-flex justify-content-center align-items-center">
+                  
+                </div>
+                <img class="challange-topic-img"  src="assets/fun.jpg">
+                <h2 class="ch-topic text-center">Fun Games</h2>
+                <p class="ch-desc">Life's a game, so let's play it with a smile.</p>
+            </div>
+            
+                      </div>
+          <div class="tranding-slider-control mt-5">
+            <div class="swiper-button-prev slider-arrow">
+              <svg class="nav-slider" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+               <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next slider-arrow nav-slider">
+              <svg class="nav-slider" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="challange-bg"></div>
+      </div>
+          </div>
+</div>        <div class="prize-cover">
+  <div class="prize-container">
+      <div class="text-center w-100">
+          <h2 class="prize-head">Prize money worth <span>INR 30,000</span></h2>
+          <p class="text-white fs-4 fw-bold"> ✨ Certificates will be provided to all the participants ✨</p>
+      </div>
+      
+</div>   
+ 
+   <div class="register">
+    <div class="register-wrap">
+        <div class="register-merge">    
+            <div class="register-row-1">
+                <div class="register-row1-content">
+                    <div class="text-center text-white">
+                        <h2 class="overview-head">GENERAL INSTRUCTIONS</h2>
+                    </div> 
+                       <div class="gi-clo">
+                        <ul>
+                            <li>Everyone must come with their respective college identity card.</li>
+                            <li>Proper dress code is mandatory for participants.</li>
+                            <li>Students Who are participating in Paper Presentation must submit their papers through Email-id: digitrix2k24@gmail.com on or Before 28/04/24.</li>
+                            <li>Students must pay ₹200 to participate in DIGITRIX-2K24.</li>
+                            <li>Student can participate in any event without any extra charges</li>
+                            <li>Lunch, Snack and Refreshments will be provided.</li>
+                            <li>A maximum of 2 member can participate in Team Events.</li>
+                        </ul>
+                       </div>
+                       <div class="register">
+                        <a class="register-btn shining-line" href="https://forms.gle/F2yPmLUSZq6d7Mui9" target="_blank">Register now</a>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+        <div class="register-bg"></div>
+    </div>
+</div>  
+
+
+<div class="faq" id="about">
+    <div class="faq-wrap">
+        <div class="faq-row-1 d-flex flex-column align-items-left">
+            <h2 class="faq-topic1">ABOUT THE COLLEGE</h2>  
+            <p class="pw"> Achariya Arts and Science College is a proud symbol of 
+                Puducherry a first-grade college established in the year 
+                2004, which is a felicitous outcome of the honourable 
+                Managing Trustee Dr. J. Arawindhan of Achariya Educational 
+                Public Trust. With 19 years of glorious excellence, the institution has 
+                been catering to all the sections of this society by imparting the 
+                need-based quality higher education through 10 Undergraduate 
+                (UG) programs, 2 Postgraduate (PG) programs, in Arts, Science, 
+                Commerce, Economics, and Business Administration.
+                The institution aims at enabling the students especially from the 
+                rural neighbourhood to accept new challenges and also imparts 
+                education by inculcating the moral values in the young minds. The 
+                vision of the institution is to provide need-based, skill-integrated, 
+                cost effective, quality and holistic education to transform the 
+                students into globally competitive, employable and responsible 
+                citizens. It is achieved with the relevant curriculam, pedagogic 
+                innovations and various collaborations and also with the best 
+                infrastructurs.</p>
+
+                <h2 class="faq-topic1">ABOUT THE DEPARTMENT</h2>  
+                <p class="pw"> The Department of Computer Science is one of the 
+                    Pioneering Department of the college, The Department 
+                    of Computer Science had its inception from 2004 and 
+                    Offering UG Programmes with two Courses such as B.sc 
+                    Computer Science and BCA. In the year of 2005 B.sc 
+                    Information Technology Courses has also been initiated. 
+                    Our Department provides High quality of Education in 
+                    the Field of Computer Science especially Programming 
+                    Languages, Problem Solving, Artificial Intelligence, 
+                    Mobile Applications, Machine Learning and Computer 
+                    Networking and Internet of Things. It has well equipped 
+                    laboratories with all the required equipment to do the 
+                    programming and Web Designing works. 
+                     The Department regularly organizes Seminars with 
+                    latest topics like Cloud Computing, Artificial Intelligence, 
+                    Data Science - Big Data Uses, Embedded Systems, 
+                    Android Projects, 2D & 3D Animation and Internet of 
+                    Things. Our Department also conducts Workshops on 
+                    Application Development and Cyber Security. 
+                     The Faculty Members are motivating the Students 
+                    both in Academic and Non-Academic field of Education. 
+                    We provide Knowledge, Awareness Programmes, Seminars, Workshops etc., which enable the students to face 
+                    the Interviews and get better job opportunity in various 
+                    fields.</p>
+        </div>
+
+                <div class="faq-bg"></div>
+    </div>
+</div>        
+<div class="footer">
+    <div class="gradient-border-top"></div>
+    <div class="map-box">
+        <div class="box">
+            <div class="box-2">
+                <h1>Achariya Arts and Science College</h1>
+                <h2>Uruvaiyar Rd, Achariyapuram, Villianur, Puducherry 605110</h2>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.033807510925!2d79.75013647505887!3d11.902734388322962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a536013d5bd3895%3A0xd0824e4201b08665!2sAchariya%20Arts%20and%20Science%20college!5e0!3m2!1sen!2sin!4v1713076519601!5m2!1sen!2sin" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       
+    </div>
+    
+   <div class="footer-bottom d-flex justify-content-center align-items-center">
+        <p> Copyright © 2024 DIGITRIX-2K24 All Rights Reserved | Website By Boobesh</p>
+    </div>  
+</div>    
+</div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html> 

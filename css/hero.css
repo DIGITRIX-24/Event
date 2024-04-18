@@ -1,0 +1,281 @@
+.hero{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.hero-wrap{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+.event-by{
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--txt-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cnt-highlight{
+    color: var(--primary-color);
+}
+
+.event-by .avatar{
+    width: 6rem;
+    height: 6rem;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.8));
+}
+
+.greetings{
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+.greetings p{
+    font-size: 3rem;
+    font-family: var(--sans);
+    font-weight: 700;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--lite-white) !important;
+}
+.yukthi-logo-container{
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.yukthi-logo {
+    display: block;
+    width: 200px; 
+    height: auto;
+}
+
+
+.yukthi-logo-container::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(105deg, transparent 49%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 51%, transparent 52%);
+    background-size: 200px 200px;
+    animation: flow 4s linear infinite;
+    mix-blend-mode: overlay;
+    -webkit-backdrop-filter: opacity(0);
+    z-index: 999;
+    -webkit-animation: flow 4s linear infinite;
+    -moz-animation: flow 4s linear infinite;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 100%);
+    filter: unquote("progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1)");
+    border-left: none;
+}
+
+@-webkit-keyframes flow {
+    0% {
+        left: -100%;
+        opacity: 0.5;
+    }
+    /* Increased opacity from 0 to 0.1 */
+    50% {
+        left: 20%;
+        opacity: 0.5;
+    }
+    /* Increased opacity from 0.3 to 0.5 */
+    100% {
+        left: 40%;
+        opacity: 0.5;
+    }
+    /* Increased opacity from 0 to 0.1 */
+}
+
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register p{
+    font-size: 23px;
+    font-family: var(--poppins);
+    color: var(--lite-white);
+}
+
+.register-btn{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    padding: 11px 25px;
+    background-color: var(--primary-color); /* This line can be removed if var(--primary-color) is not defined or not needed */
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.count-down{
+    position: relative;
+    width: 70%;
+    height: 200px;
+    background: rgba( 12, 9, 8, 0.4 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--lite-white);
+    padding: 0 3%;
+    -webkit-box-shadow: inset 2px 7px 300px -200px rgb(159, 239, 0);
+    -moz-box-shadow: inset 2px 7px 300px -200px rgb(159, 239, 0);
+    box-shadow: inset 2px 7px 300px -200px rgb(159, 239, 0);
+}
+
+.cust-text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider{
+    content: '';
+    width: 5px;
+    height: 80px;
+    background: rgb(159, 239, 0);
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+}
+
+.days p, .hours p, .minutes p, .seconds p{
+    font-family: var(--sans);
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0 !important;
+}
+
+.days span, .hours span, .minutes span, .seconds span{
+    font-family: var(--sans);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+@media only screen and (min-width: 931px) and (max-width: 1024px) {
+    .days p, .hours p, .minutes p, .seconds p {
+        font-size: 3rem !important;
+    }
+}
+
+@media only screen and (min-width: 728px) and (max-width: 931px) {
+    .days p, .hours p, .minutes p, .seconds p {
+        font-size: 3rem !important;
+    }
+    .greetings{
+        width: 80%;
+        font-size: 1rem;
+    }
+    .register{
+        width: 60%;
+    }
+    .register p{
+        font-size: 20px;
+    }
+    .count-down{
+        width: 80%;
+        height: 150px;
+        padding: 0 3%;
+    }
+}
+
+@media only screen and (min-width:200px) and (max-width: 500px) {
+    .greetings p{
+        font-size: 1.5rem;
+        font-family: var(--sans);
+        font-weight: 400;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: var(--lite-white) !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 728px) {
+    .event-by{
+        margin-top: 20px;
+    }
+    .event-by .avatar{
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+    .greetings{
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    .register{
+        width: 80%;
+    }
+    .register p{
+        font-size: 15px;
+    }
+    .count-down{
+        margin-top: px;
+        width: 100%;
+        height: 120px;
+        padding: 0 3%;
+    }
+    .days p, .hours p, .minutes p, .seconds p {
+        font-size: 2rem !important;
+    }
+    .days span, .hours span, .minutes span, .seconds span{
+        font-family: var(--sans);
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .divider{
+        width: 3px;
+        height: 50px;
+    }
+}
+   
+      #typed {
+        font-weight: bold;
+        color: #00bdff;
+
+      }
+      
+      .cursor {
+        display: inline-block;
+        background-color: #b0ff95;
+        animation: blinker 800ms infinite;
+      }
+      
+      .cursor.typing-true {
+        animation: none;
+      }
+      
+      @keyframes blinker {
+          0% { background-color: #00aeff; }
+          50% { background-color: transparent; }
+          100% { background-color: #00aeff; }
+      }
+      
+      

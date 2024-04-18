@@ -1,0 +1,99 @@
+nav{
+    width: 100vw;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(97, 97, 97, 0.049);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px); /* Corrected: removed the -webkit-filter for nav */
+}
+
+.nav-wrap{
+    width: 100%;
+    height: 100%;
+    background: rgba(82, 82, 82, 0.25);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    padding: 0 5%;
+}
+
+
+.nav-items{
+    gap: 1.5rem;
+}
+
+.nav-items li{
+    list-style: none;
+}
+
+.nav-items li a{
+    text-decoration: none;
+    color: var(--txt-white);
+    font-family: var(--poppins);
+}
+
+.nav-items li a:hover{
+    color: var(--primary-color);
+}
+
+.highlight-me{
+    color: var(--primary-color) !important;
+}
+
+.mobile-btn{
+    display: none;
+    text-decoration: none;
+    color: var(--txt-white);
+    font-family: var(--poppins);
+}
+
+.tn-logo{
+    width: 5rem; 
+    height: 5rem;
+    margin-right: 1rem;
+    border-radius: 2px;
+}
+
+.sna-logo{
+    height: 2rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .tn-logo{
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+    .nav-wrap{
+        background: rgba( 16, 16, 16, 0.5);
+        backdrop-filter: blur( 6.5px );
+        -webkit-backdrop-filter: blur( 6.5px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .sna-logo{
+        height: 1.5rem !important;
+    }
+
+    .nav-items li a{
+        display: none !important;
+    }
+
+    .mobile-btn{
+        display: block !important;
+    }
+}
+
+
+@media only screen and (max-width: 460px){
+    .nav-wrap{
+        padding: 0 20px !important;
+    }
+    .tn-logo{
+        margin-right: 0.5rem !important;
+    }
+    .nav-items{
+        gap: 0 !important;
+    }
+
+}

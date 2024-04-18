@@ -1,0 +1,86 @@
+:root {
+    --txt-white: #fff;
+    --lite-white: #ececea;
+    --primary-color:rgb(0 189 255);
+    --lite-txt: #adacaa;
+    --bg-color: #070707;
+    --black: #070707;
+    --poppins: "Poppins", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
+    --sans: "Open Sans", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color) !important;
+  color:whitesmoke;
+}
+
+.container-wrap{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.home-cover{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh; 
+    background: url('../assets/green-bg.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    /* box-shadow: 0 0 8px #9fef00; */
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #333333;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #222224;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #070707;
+  }
+
+  .shining-line {
+    --shining-line-bg: linear-gradient(to right, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
+    --shining-line-width: 1.5rem;
+    --shining-line-scale-y: 1.5;
+    --shining-line-skew-x: -30deg;
+    --shining-line-basic-transform: scaleY(var(--shining-line-scale-y)) skewX(var(--shining-line-skew-x)) rotateZ(0);
+    position: relative;
+    overflow: hidden;
+  }
+  .shining-line::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: 0;
+    left: 0;
+    width: var(--shining-line-width);
+    height: 100%;
+    background: var(--shining-line-bg);
+    transform: var(--shining-line-basic-transform);
+    animation: shining-line-move 1s ease-in-out infinite;
+    opacity: 0.8;
+    filter: blur(1px);
+  }
+  @keyframes shining-line-move {
+    from {
+      left: -20%;
+    }
+    to {
+      left: 120%;
+    }
+  }
+  

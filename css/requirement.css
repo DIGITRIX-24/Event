@@ -1,0 +1,95 @@
+.requirement{
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+    margin-bottom: 50px !important;
+    padding: 0 15%;
+}
+
+.hero-event-content{
+    width: 100%;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.hero-event-box{
+    background:  rgba(50, 50, 50, 0.267) !important;
+    border-radius: 5px;
+    min-width: 180px;
+    padding-right: .5rem;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.hero-event-box-head{
+    color: var(--lite-white);
+}
+
+.hero-event-box-sub{
+    color: var(--primary-color);
+}
+
+.overview-head{
+    font-size: 3rem !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, #b8b8b8 0%, #616363 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media only screen and (max-width: 621px) {
+    .requirement{
+        padding: 0 5%;
+    }
+    .hero-event-box{
+        padding-left: 1.5 !important;
+        padding-right: 1.5 !important;
+        margin: 0 !important;
+        text-align: center;
+    }
+    .hero-event-svg{
+        text-align: center;
+        width: 100% !important;
+    }   
+}
+
+@media only screen and (max-width: 440px) {
+    .requirement{
+        padding: 0 !important;
+        margin: 0px !important;
+    }
+    .hero-event-content{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px !important;
+    }
+    .hero-event-box{
+        min-width: 10px !important;
+        text-align: left !important;
+    }
+    .hero-event-svg{
+        text-align: left;
+        width: 100% !important;
+    }
+    .hero-event-box-head{
+        font-size: 16px !important;
+    }
+    .hero-event-box-sub{
+        font-size: 14px !important;
+    }
+    .overview-head{
+        font-size: 2rem !important;
+    }
+}
